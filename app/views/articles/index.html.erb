@@ -1,0 +1,25 @@
+<h1>All Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title:</th>
+      <th>Description</th>
+      <th>ID:</th>
+      <th>Action:</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each.with_index do |article, index| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %> </td>
+        <td><%= article.id %></td>
+        <td><input class="remove-article" type="button" value="Remove" id="<%= article.id %>"/></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
